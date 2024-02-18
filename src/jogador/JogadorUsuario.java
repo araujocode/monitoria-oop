@@ -18,35 +18,26 @@ public class JogadorUsuario extends Jogador {
         System.out.println(nome + ", é sua vez de jogar");
         System.out.println("Suas cartas:");
         for (int i = 0; i < mao.size(); i++) {
-            System.out.println((i + 1) + ": " + mao.get(i).getValor() + " de " + mao.get(i).getNaipe());
+            System.out.println((i + 1) + ": " + mao.get(i));
         }
 
-        String escolha;
-        do {
-            System.out.print("\nEscolha o valor da carta que deseja jogar: ");
-            escolha = scanner.next().toUpperCase();
-        } while (!validarEscolha(escolha));
-
-        // Encontra a carta na mão com o valor escolhido e a remove
-        for (Carta carta : mao) {
-            if (carta.getValor().equals(escolha)) {
-                mao.remove(carta);
-                return carta;
+        int escolha;
+        while (true) {
+            System.out.print("\nEscolha o número da carta que deseja jogar (entre 1 e 3): ");
+            escolha = scanner.nextInt();
+            if (validarEscolha(escolha)) {
+                break;
+            } else {
+                System.out.println("Escolha uma carta válida entre as opções 1 e 3.");
             }
         }
 
-        // Se a carta não for encontrada, retorna null
-        return null;
+        // Encontra a carta na mão com o número escolhido e a remove
+        return mao.remove(escolha - 1);
     }
 
     // Método para validar se a escolha do jogador corresponde a uma carta em sua mão
-    private boolean validarEscolha(String escolha) {
-        for (Carta carta : mao) {
-            if (carta.getValor().equals(escolha)) {
-                return true;
-            }
-        }
-        System.out.println("Você não tem uma carta com esse valor na sua mão. Por favor, escolha novamente.");
-        return false;
+    private boolean validarEscolha(int escolha) {
+        return escolha >= 1 && escolha <= 3;
     }
 }

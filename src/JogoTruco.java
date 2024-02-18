@@ -34,22 +34,15 @@ public class JogoTruco {
         System.out.println("\nCarta jogada pelo Jogador 1: " + cartaJogada1.getValor() + " de " + cartaJogada1.getNaipe());
         System.out.println("Carta jogada pelo Computador: " + cartaJogada2.getValor() + " de " + cartaJogada2.getNaipe());
 
-        // Verificar se as cartas jogadas são instâncias de CartaNormal e, caso sejam, compará-las
-        if (cartaJogada1 instanceof CartaNormal && cartaJogada2 instanceof CartaNormal) {
-            CartaNormal cartaNormal1 = (CartaNormal) cartaJogada1;
-            CartaNormal cartaNormal2 = (CartaNormal) cartaJogada2;
+        // Comparação das cartas jogadas
+        int resultado = cartaJogada1.getValorTruco() - cartaJogada2.getValorTruco();
 
-            int resultado = cartaNormal1.compararTruco(cartaNormal2);
-
-            if (resultado > 0) {
-                System.out.println("O Jogador 1 venceu a rodada!");
-            } else if (resultado < 0) {
-                System.out.println("O Computador venceu a rodada!");
-            } else {
-                System.out.println("Empate na rodada!");
-            }
+        if (resultado > 0) {
+            System.out.println("O Jogador 1 venceu a rodada!");
+        } else if (resultado < 0) {
+            System.out.println("O Computador venceu a rodada!");
         } else {
-            System.out.println("Cartas especiais jogadas ou algum jogador não jogou uma carta normal.");
+            System.out.println("Empate na rodada!");
         }
     }
 }

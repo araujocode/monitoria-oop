@@ -8,12 +8,17 @@ public class CartaNormal extends Carta {
         this.valorCarta = valorCarta;
     }
 
-
     @Override
     public int getValorTruco() {
         return valorCarta.getPrioridade();
     }
+
     public int compararTruco(CartaNormal outraCarta) {
         return Integer.compare(this.getValorTruco(), outraCarta.getValorTruco());
+    }
+
+    @Override
+    public String toString() {
+        return getValor() + " de " + getNaipe();
     }
 }

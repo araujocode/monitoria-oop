@@ -5,12 +5,12 @@ public enum ValorCarta {
     CINCO(5),
     SEIS(6),
     SETE(7),
-    Q(12, "Q"),
-    J(11, "J"),
-    K(13, "K"),
-    A(14, "A"),
-    DOIS(2),
-    TRES(3);
+    Q(8, "Q"),
+    J(9, "J"),
+    K(10, "K"),
+    A(11, "A"),
+    DOIS(12),
+    TRES(13);
 
     private final int prioridade;
     private final String letra;
