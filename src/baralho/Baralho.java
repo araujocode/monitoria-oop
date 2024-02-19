@@ -1,32 +1,26 @@
 package baralho;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Baralho {
     private List<Carta> cartas;
 
     public Baralho() {
-        cartas = new ArrayList<>();
+        Set<Carta> cartasSet = new HashSet<>();
         // Preencher o baralho com cartas
         String[] naipes = {"Ouros", "Espadas", "Copas", "Paus"};
-        Set<String> cartasAdicionadas = new HashSet<>(); // Criar combinações únicas de valor e naipe
         for (String naipe : naipes) {
             for (ValorCarta valor : ValorCarta.values()) { // Iterar sobre todos os valores do enum
-                String chave = valor.name() + " de " + naipe; // Combinação de valor e naipe
-                if (cartasAdicionadas.add(chave)) { // Verificar se a combinação ainda não foi adicionada
-                    cartas.add(new CartaNormal(naipe, valor.name(), valor));
-                }
+                cartasSet.add(new CartaNormal(naipe, valor.name(), valor)); // Adicionar a carta ao HashSet, evitando repetições
             }
         }
+        cartas = new ArrayList<>(cartasSet); // Converter o HashSet para ArrayList
     }
+
+
     public void embaralhar() {
         Collections.shuffle(cartas);
     }
-
     public Carta darCarta() {
         return cartas.remove(0);
     }
