@@ -1,7 +1,6 @@
 package jogador;
 
 import baralho.Carta;
-
 import java.util.Scanner;
 
 public class JogadorUsuario extends Jogador {

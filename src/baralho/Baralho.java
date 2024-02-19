@@ -1,8 +1,10 @@
 package baralho;
 
 import java.util.*;
+
 public class Baralho {
     private List<Carta> cartas;
+
     public Baralho() {
         Set<Carta> cartasSet = new HashSet<>();
         // Preencher o baralho com cartas
@@ -14,9 +16,11 @@ public class Baralho {
         }
         cartas = new ArrayList<>(cartasSet); // Converter o HashSet para ArrayList
     }
+
     public void embaralhar() {
         Collections.shuffle(cartas);
     }
+
     public Carta darCarta() {
         return cartas.remove(0);
     }

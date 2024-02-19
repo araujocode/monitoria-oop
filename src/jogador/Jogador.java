@@ -7,6 +7,7 @@ import java.util.List;
 public abstract class Jogador {
     protected String nome;
     protected List<Carta> mao;
+
     public Jogador(String nome) {
         this.nome = nome;
         this.mao = new ArrayList<>();
