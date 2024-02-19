@@ -1,36 +1,20 @@
 package jogador;
 
 import baralho.Carta;
-import baralho.CartaNormal;
+import java.util.Random;
 
 public class JogadorMaquina extends Jogador {
+    private Random random;
+
     public JogadorMaquina(String nome) {
         super(nome);
+        random = new Random();
     }
 
     @Override
     public Carta jogarCarta() {
-        // Implementação específica para um jogador controlado pelo computador
-        // Escolhe a carta com maior valor de truco na mão do jogador
-        Carta cartaAJogar = null;
-        int maiorValorTruco = Integer.MIN_VALUE;
-
-        for (Carta carta : mao) {
-            if (carta instanceof CartaNormal) {
-                CartaNormal cartaNormal = (CartaNormal) carta;
-                if (cartaNormal.getValorTruco() > maiorValorTruco) {
-                    maiorValorTruco = cartaNormal.getValorTruco();
-                    cartaAJogar = cartaNormal;
-                }
-            }
-        }
-
-        if (cartaAJogar != null) {
-            mao.remove(cartaAJogar);
-            return cartaAJogar;
-        } else {
-            // Se não houver cartas normais na mão, joga a primeira carta disponível
-            return mao.remove(0);
-        }
+        // Escolhe uma carta aleatória da mão do jogador
+        int indiceCarta = random.nextInt(mao.size());
+        return mao.remove(indiceCarta);
     }
 }
