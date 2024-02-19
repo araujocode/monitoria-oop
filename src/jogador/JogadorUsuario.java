@@ -11,7 +11,7 @@ public class JogadorUsuario extends Jogador {
         scanner = new Scanner(System.in);
     }
 
-    @Override
+    @Override //3 - Polimorfismo em JogadorMaquina (sobrescrita de método)
     public Carta jogarCarta() {
         System.out.println("");
         System.out.println(nome + ", é sua vez de jogar");

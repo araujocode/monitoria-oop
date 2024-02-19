@@ -3,7 +3,7 @@ package baralho;
 import java.util.*;
 
 public class Baralho {
-    private List<Carta> cartas;
+    private List<Carta> cartas; //5 - Associação de Classes
 
     public Baralho() {
         Set<Carta> cartasSet = new HashSet<>();

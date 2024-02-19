@@ -7,8 +7,11 @@
     <list default="true" id="fa7a994a-e1fc-478b-851d-a9f8534f17a5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/JogoTruco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JogoTruco.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baralho/Carta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baralho/Carta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baralho/CartaNormal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baralho/CartaNormal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baralho/Baralho.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baralho/Baralho.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baralho/ValorCarta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baralho/ValorCarta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jogador/Jogador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogador/Jogador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jogador/JogadorMaquina.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogador/JogadorMaquina.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jogador/JogadorUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jogador/JogadorUsuario.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +77,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1708293779216</updated>
-      <workItem from="1708293780435" duration="10191000" />
+      <workItem from="1708293780435" duration="13187000" />
     </task>
     <servers />
   </component>

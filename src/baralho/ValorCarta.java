@@ -20,7 +20,7 @@ public enum ValorCarta {
         this.letra = null;
     }
 
-    ValorCarta(int prioridade, String letra) {
+    ValorCarta(int prioridade, String letra) {//Sobrecarga de método construtor (privado implicitamente pois é enum)
         this.prioridade = prioridade;
         this.letra = letra;
     }

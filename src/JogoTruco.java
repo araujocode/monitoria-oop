@@ -23,15 +23,15 @@ public class JogoTruco {
         // Exibir as cartas da máquina
         System.out.println("\nCartas do Computador:");
         for (Carta carta : jogador2.getMao()) {
-            System.out.println(carta.getValor() + " de " + carta.getNaipe());
+            System.out.println(carta);
         }
 
         // Simulação do jogo (comparação das cartas jogadas)
         Carta cartaJogada1 = jogador1.jogarCarta();
         Carta cartaJogada2 = jogador2.jogarCarta();
 
-        System.out.println("\nCarta jogada pelo Jogador 1: " + cartaJogada1.getValor() + " de " + cartaJogada1.getNaipe());
-        System.out.println("Carta jogada pelo Computador: " + cartaJogada2.getValor() + " de " + cartaJogada2.getNaipe());
+        System.out.println("\nCarta jogada pelo Jogador 1: " + cartaJogada1);
+        System.out.println("Carta jogada pelo Computador: " + cartaJogada2);
 
         // Comparação das cartas jogadas
         int resultado = cartaJogada1.getPrioridadeTruco() - cartaJogada2.getPrioridadeTruco();

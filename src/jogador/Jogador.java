@@ -4,9 +4,9 @@ import baralho.Carta;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Jogador {
-    protected String nome;
-    protected List<Carta> mao;
+public abstract class Jogador { //1 - Abstração
+    protected String nome; //2 - Modificador de acesso protected - encapsulamento
+    protected List<Carta> mao; // Composição entre classes
 
     public Jogador(String nome) {
         this.nome = nome;
@@ -19,7 +19,7 @@ public abstract class Jogador {
     }
 
     // Método para jogar uma carta
-    public abstract Carta jogarCarta();
+    public abstract Carta jogarCarta(); // 1 - Método abstrato torna a classe abstrata tambem
 
     // Método para receber uma carta
     public void receberCarta(Carta carta) {

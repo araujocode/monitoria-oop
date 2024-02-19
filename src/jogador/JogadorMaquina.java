@@ -3,15 +3,15 @@ package jogador;
 import baralho.Carta;
 import java.util.Random;
 
-public class JogadorMaquina extends Jogador {
-    private Random random;
+public class JogadorMaquina extends Jogador { //2 - Herança
+    private Random random; // 2 - Encapsulamento
 
     public JogadorMaquina(String nome) {
         super(nome);
         random = new Random();
     }
 
-    @Override
+    @Override // 3 - Polimorfismo em JogadorMaquina (sobrescrita de método)
     public Carta jogarCarta() {
         // Escolhe uma carta aleatória da mão do jogador
         int indiceCarta = random.nextInt(mao.size());
