@@ -13,10 +13,6 @@ public class CartaNormal extends Carta {
         return valorCarta.getPrioridade();
     }
 
-    public int compararTruco(CartaNormal outraCarta) {
-        return Integer.compare(this.getValorTruco(), outraCarta.getValorTruco());
-    }
-
     @Override
     public String toString() {
         return getValor() + " de " + getNaipe();

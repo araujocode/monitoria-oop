@@ -23,9 +23,6 @@ public class Baralho {
             }
         }
     }
-
-
-
     public void embaralhar() {
         Collections.shuffle(cartas);
     }
