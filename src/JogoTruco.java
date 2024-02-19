@@ -34,7 +34,7 @@ public class JogoTruco {
         System.out.println("Carta jogada pelo Computador: " + cartaJogada2.getValor() + " de " + cartaJogada2.getNaipe());
 
         // Comparação das cartas jogadas
-        int resultado = cartaJogada1.getValorTruco() - cartaJogada2.getValorTruco();
+        int resultado = cartaJogada1.getPrioridadeTruco() - cartaJogada2.getPrioridadeTruco();
 
         if (resultado > 0) {
             System.out.println("O Jogador 1 venceu a rodada!");

@@ -9,7 +9,7 @@ public class CartaNormal extends Carta {
     }
 
     @Override
-    public int getValorTruco() {
+    public int getPrioridadeTruco() {
         return valorCarta.getPrioridade();
     }
 

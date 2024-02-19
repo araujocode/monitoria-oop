@@ -17,5 +17,5 @@ public abstract class Carta {
         return valor;
     }
 
-    public abstract int getValorTruco();
+    public abstract int getPrioridadeTruco();
 }
