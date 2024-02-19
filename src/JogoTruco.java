@@ -1,6 +1,5 @@
 import baralho.Baralho;
 import baralho.Carta;
-import baralho.CartaNormal;
 import jogador.Jogador;
 import jogador.JogadorMaquina;
 import jogador.JogadorUsuario;

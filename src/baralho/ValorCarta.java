@@ -1,5 +1,4 @@
 package baralho;
-
 public enum ValorCarta {
     QUATRO(4),
     CINCO(5),
@@ -11,7 +10,6 @@ public enum ValorCarta {
     A(11, "A"),
     DOIS(12),
     TRES(13);
-
     private final int prioridade;
     private final String letra;
 
@@ -19,16 +17,13 @@ public enum ValorCarta {
         this.prioridade = prioridade;
         this.letra = null;
     }
-
     ValorCarta(int prioridade, String letra) {
         this.prioridade = prioridade;
         this.letra = letra;
     }
-
     public int getPrioridade() {
         return prioridade;
     }
-
     public String getLetra() {
         return letra;
     }
