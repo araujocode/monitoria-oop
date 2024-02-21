@@ -7,7 +7,7 @@ import jogador.JogadorUsuario;
 public class JogoTruco {
     public static void main(String[] args) {
         // Criar os jogadores
-        Jogador jogador1 = new JogadorUsuario("Jogador 1");
+        Jogador jogador1 = new JogadorUsuario("Jogador 1"); //downcasting
         Jogador jogador2 = new JogadorMaquina("Computador");
 
         // Criar o baralho e embaralhar
@@ -23,11 +23,11 @@ public class JogoTruco {
         // Exibir as cartas da máquina
         System.out.println("\nCartas do Computador:");
         for (Carta carta : jogador2.getMao()) {
-            System.out.println(carta);
+            System.out.println(carta); //toString() funciona aqui
         }
 
         // Simulação do jogo (comparação das cartas jogadas)
-        Carta cartaJogada1 = jogador1.jogarCarta();
+        Carta cartaJogada1 = jogador1.jogarCarta(); //polimorfismo do jogarCarta()
         Carta cartaJogada2 = jogador2.jogarCarta();
 
         System.out.println("\nCarta jogada pelo Jogador 1: " + cartaJogada1);

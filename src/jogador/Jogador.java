@@ -6,7 +6,7 @@ import java.util.List;
 
 public abstract class Jogador { //1 - Abstração
     protected String nome; //2 - Modificador de acesso protected - encapsulamento
-    protected List<Carta> mao; // Composição entre classes
+    protected List<Carta> mao;
 
     public Jogador(String nome) {
         this.nome = nome;
@@ -19,9 +19,8 @@ public abstract class Jogador { //1 - Abstração
     }
 
     // Método para jogar uma carta
-    public abstract Carta jogarCarta(); // 1 - Método abstrato torna a classe abstrata tambem
+    public abstract Carta jogarCarta(); // 1 - Método abstrato
 
-    // Método para receber uma carta
     public void receberCarta(Carta carta) {
         mao.add(carta);
     }

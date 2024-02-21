@@ -20,14 +20,14 @@ public enum ValorCarta {
         this.letra = null;
     }
 
-    ValorCarta(int prioridade, String letra) {//Sobrecarga de método construtor (privado implicitamente pois é enum)
+    ValorCarta(int prioridade, String letra) {//Sobrecarga de método construtor
         this.prioridade = prioridade;
         this.letra = letra;
     }
 
     public int getPrioridade() {
         return prioridade;
-    }
+    } //Padronização JavaBeans para contribuir com o encapsulamento
 
     public String getLetra() {
         return letra;

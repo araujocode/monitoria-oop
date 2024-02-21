@@ -11,7 +11,7 @@ public class JogadorMaquina extends Jogador { //2 - Herança
         random = new Random();
     }
 
-    @Override // 3 - Polimorfismo em JogadorMaquina (sobrescrita de método)
+    @Override // 3 - Polimorfismo 1 (sobrescrita de método)
     public Carta jogarCarta() {
         // Escolhe uma carta aleatória da mão do jogador
         int indiceCarta = random.nextInt(mao.size());
